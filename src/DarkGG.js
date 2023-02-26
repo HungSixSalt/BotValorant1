@@ -86,7 +86,7 @@ class DarkGG {
 
   static async GetLastSeasonStats(puuid, seasonID) {
     return await Utility.DownloadData(
-      `hhttps://val.dakgg.io/api/v1/accounts/${puuid}/seasons/${seasonID}`
+      `https://val.dakgg.io/api/v1/accounts/${puuid}/seasons/${seasonID}`
     );
   }
   static async GetLastSeasonStatsByID(id) {

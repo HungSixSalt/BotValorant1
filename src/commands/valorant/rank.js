@@ -56,7 +56,7 @@ module.exports = {
     let tierName = DarkGG.tier[competitive.competitiveTierId];
     //xóa tất cả role rank của nember
     DarkGG.tier.forEach(element => {
-        if(interaction.member.roles.cache.some(role => role.name == element)){
+        if(interaction.member.roles.cache.some(role => role.name == element ||role.name!= tierName)){
             let role = interaction.guild.roles.cache.find((role) => role.name == element);
             interaction.member.roles.remove(role);
         }
